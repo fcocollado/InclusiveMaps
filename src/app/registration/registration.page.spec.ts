@@ -39,6 +39,7 @@ describe('RegistrationPage', () => {
     component.userRegisterModal = {
       nombre: '',
       apellido: '',
+      usuario: 'fcocollado',
       email: '',
       password: ''
     };
@@ -58,6 +59,7 @@ describe('RegistrationPage', () => {
     component.userRegisterModal = {
       nombre: 'John',
       apellido: 'Doe',
+      usuario: 'fcocollado',
       email: 'john.doe@example.com',
       password: 'password123'
     };
@@ -81,6 +83,7 @@ describe('RegistrationPage', () => {
     component.userRegisterModal = {
       nombre: 'John',
       apellido: 'Doe',
+      usuario: 'fcocollado',
       email: 'john.doe@example.com',
       password: 'password123'
     };
@@ -96,7 +99,8 @@ describe('RegistrationPage', () => {
       nombre: '',
       apellido: '',
       email: '',
-      password: ''
+      password: '',
+      usuario:''
     };
     await component.bottonCrearUsuario();
     expect(component.presentAlert).toHaveBeenCalledWith('Error', 'Por favor, completa todos los campos correctamente.');

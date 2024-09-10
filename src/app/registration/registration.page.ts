@@ -13,7 +13,7 @@ export class RegistrationPage implements OnInit {
     throw new Error('Method not implemented.');
   }
   registrationForm!: FormGroup;
-  userRegisterModal: { nombre: string; apellido: string; email: string; password: string; } | undefined;
+  userRegisterModal: { nombre: string; apellido: string; email: string; password: string; usuario: string; } | undefined;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -25,6 +25,7 @@ export class RegistrationPage implements OnInit {
     this.registrationForm = this.formBuilder.group({
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
+      usuario: ['', [Validators.required, Validators.minLength(8)]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]],
       disabilities: [[], Validators.required]

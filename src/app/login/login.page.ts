@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router'; // Para redirigir después de hacer login
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-login',
@@ -14,18 +14,16 @@ export class LoginPage {
   constructor(private router: Router) {}
 
   redirectfuncion() {
-    // Redirigir a la página de inicio u otra página
+    // Redirigir a la página de inicio 
     this.router.navigate(['/home']);
   }
 
   onLogin() {
-    // Verifica si los campos están correctos (sin conexión a base de datos)
     if (this.username === 'admin' && this.password === '1234') {
-      this.message = 'Login successful!';
-      // Redirigir a la página de inicio u otra página
+      this.message = 'Inicio de sesión exitoso';
       this.router.navigate(['/home']);
     } else {
-      this.message = 'Invalid username or password';
+      this.message = 'Usuario o contraseña inválidos';
     }
   }
 }

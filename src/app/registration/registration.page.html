@@ -14,7 +14,7 @@
       <ion-item>
         <ion-label position="floating">Nombre</ion-label>
         <ion-input formControlName="nombre" type="text"></ion-input>
-        <ion-note color="danger" *ngIf="registrationForm?.get('nombre')?.invalid && (registrationForm?.get('nombre')?.touched || registrationForm?.get('nombre')?.dirty)">
+        <ion-note color="danger" *ngIf="registrationForm.get('nombre')?.invalid && (registrationForm?.get('nombre')?.touched || registrationForm?.get('nombre')?.dirty)">
           Nombre es requerido.
         </ion-note>
       </ion-item>
@@ -22,15 +22,22 @@
       <ion-item>
         <ion-label position="floating">Apellido</ion-label>
         <ion-input formControlName="apellido" type="text"></ion-input>
-        <ion-note color="danger" *ngIf="registrationForm?.get('apellido')?.invalid && (registrationForm?.get('apellido')?.touched || registrationForm?.get('apellido')?.dirty)">
+        <ion-note color="danger" *ngIf="registrationForm.get('apellido')?.invalid && (registrationForm?.get('apellido')?.touched || registrationForm?.get('apellido')?.dirty)">
           Apellido es requerido.
+        </ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input formControlName="usuario" type="text"></ion-input>
+        <ion-note color="danger" *ngIf="registrationForm.get('usuario')?.invalid && (registrationForm?.get('usuario')?.touched || registrationForm?.get('usuario')?.dirty)">
+          Usuario debe tener al menos 8 caracteres.
         </ion-note>
       </ion-item>
   
       <ion-item>
         <ion-label position="floating">Email</ion-label>
         <ion-input formControlName="email" type="email"></ion-input>
-        <ion-note color="danger" *ngIf="registrationForm?.get('email')?.invalid && (registrationForm?.get('email')?.touched || registrationForm?.get('email')?.dirty)">
+        <ion-note color="danger" *ngIf="registrationForm.get('email')?.invalid && (registrationForm?.get('email')?.touched || registrationForm?.get('email')?.dirty)">
           Email inválido.
         </ion-note>
       </ion-item>
@@ -38,7 +45,7 @@
       <ion-item>
         <ion-label position="floating">Contraseña</ion-label>
         <ion-input formControlName="password" type="password"></ion-input>
-        <ion-note color="danger" *ngIf="registrationForm?.get('password')?.invalid && (registrationForm?.get('password')?.touched || registrationForm?.get('password')?.dirty)">
+        <ion-note color="danger" *ngIf="registrationForm.get('password')?.invalid && (registrationForm?.get('password')?.touched || registrationForm?.get('password')?.dirty)">
           Contraseña debe tener al menos 8 caracteres.
         </ion-note>
       </ion-item>
@@ -53,7 +60,7 @@
         </ion-select>
       </ion-item>
   
-      <ion-button expand="full" type="submit" [disabled]="registrationForm?.invalid">Registrar</ion-button>
+      <ion-button expand="full" type="submit" [disabled]="registrationForm.invalid">Registrar</ion-button>
     </form>
   </ion-content>
   

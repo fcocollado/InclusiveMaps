@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
   username: string = 'admin'; // Puedes hacerlo dinámico según el usuario que haya iniciado sesión
-  selectedDisabilities: string[] = []; // Array para almacenar las discapacidades seleccionadas
+  v_discapacidad: string[] = []; // Array para almacenar las discapacidades seleccionadas
 
   constructor(private router: Router) {}
 
@@ -20,7 +20,7 @@ export class HomePage {
   // Se llama cuando el usuario cambia la selección en el ion-select
   onDisabilitiesChange() {
     // Registrar la selección en la variable
-    console.log('Discapacidades seleccionadas:', this.selectedDisabilities);
+    console.log('Discapacidades seleccionadas:', this.v_discapacidad);
   }
 
   navigateToLogin() {
