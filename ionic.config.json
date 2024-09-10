@@ -1,0 +1,7 @@
+{
+  "name": "inclusivemaps",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
